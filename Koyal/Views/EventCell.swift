@@ -15,7 +15,7 @@ class EventCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentLabel.layer.masksToBounds = true
-        contentLabel.layer.cornerRadius = contentLabel.frame.size.height / 5
+        contentLabel.layer.cornerRadius = contentLabel.frame.size.height / 10
     }
     
 }
