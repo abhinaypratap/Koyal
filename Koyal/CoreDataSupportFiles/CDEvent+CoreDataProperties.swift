@@ -1,5 +1,5 @@
 //
-//  Event+CoreDataProperties.swift
+//  CDEvent+CoreDataProperties.swift
 //  Koyal
 //
 //  Created by Abhinay Pratap on 30/07/22.
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Event {
+extension CDEvent {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Event> {
-        return NSFetchRequest<Event>(entityName: "Event")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<CDEvent> {
+        return NSFetchRequest<CDEvent>(entityName: "CDEvent")
     }
 
     @NSManaged public var id: UUID?
@@ -23,6 +23,6 @@ extension Event {
 
 }
 
-extension Event : Identifiable {
+extension CDEvent : Identifiable {
 
 }
