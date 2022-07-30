@@ -28,7 +28,10 @@ class EventViewController: UIViewController {
         eventTableView.dataSource = self
         populateTable()
     }
-    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        populateTable()
+//    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         populateTable()
@@ -38,7 +41,6 @@ class EventViewController: UIViewController {
 
 // Unwind Segues
 extension EventViewController {
-    @IBAction func unwindCancel(_ sender: UIStoryboardSegue) {}
     @IBAction func unwindSave(_ sender: UIStoryboardSegue) {
         
     }
