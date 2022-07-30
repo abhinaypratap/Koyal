@@ -77,7 +77,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="q33-72-1sm">
                             <connections>
                                 <action selector="didTapAdd:" destination="BYZ-38-t0r" id="LSU-N6-wwb"/>
-                                <segue destination="bk9-SH-pEC" kind="show" id="6bf-as-l0l"/>
+                                <segue destination="21A-V2-U9B" kind="show" id="Ks2-2H-B4F"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="722" y="3"/>
         </scene>
-        <!--Event Detail Table View Controller-->
+        <!--Add Event-->
         <scene sceneID="e2E-sy-nup">
             <objects>
                 <tableViewController id="21A-V2-U9B" customClass="EventDetailTableViewController" customModule="Koyal" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,26 +101,28 @@
                             <tableViewSection headerTitle="Event" id="vFG-kt-ll8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="s2S-Qg-f8s">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="100.33333587646484"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="60.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s2S-Qg-f8s" id="aFh-Rz-2Bf">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="100.33333587646484"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="60.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ezg-SJ-ckr">
-                                                    <rect key="frame" x="10" y="0.0" width="370" height="100.33333333333333"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aT2-XF-ux8">
+                                                    <rect key="frame" x="10" y="0.0" width="370" height="60.333333333333336"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="4qY-eN-sid"/>
+                                                        <constraint firstAttribute="height" constant="60" id="Sf0-83-BEJ"/>
                                                     </constraints>
+                                                    <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ezg-SJ-ckr" firstAttribute="leading" secondItem="aFh-Rz-2Bf" secondAttribute="leading" constant="10" id="gQD-jD-51l"/>
-                                                <constraint firstItem="Ezg-SJ-ckr" firstAttribute="top" secondItem="aFh-Rz-2Bf" secondAttribute="top" id="lyJ-JN-Naj"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ezg-SJ-ckr" secondAttribute="trailing" constant="10" id="mcB-ob-h55"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ezg-SJ-ckr" secondAttribute="bottom" id="pAD-zD-F4n"/>
+                                                <constraint firstItem="aT2-XF-ux8" firstAttribute="leading" secondItem="aFh-Rz-2Bf" secondAttribute="leading" constant="10" id="W3G-Cq-92x"/>
+                                                <constraint firstAttribute="bottom" secondItem="aT2-XF-ux8" secondAttribute="bottom" id="YQL-lX-iJa"/>
+                                                <constraint firstAttribute="trailing" secondItem="aT2-XF-ux8" secondAttribute="trailing" constant="10" id="ftj-og-mtQ"/>
+                                                <constraint firstItem="aT2-XF-ux8" firstAttribute="top" secondItem="aFh-Rz-2Bf" secondAttribute="top" id="wxb-Kx-7ec"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -129,7 +131,7 @@
                             <tableViewSection id="SzT-5m-1XN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ATh-nL-p9v" detailTextLabel="mBc-WJ-LaJ" style="IBUITableViewCellStyleValue1" id="xNt-9R-rWM">
-                                        <rect key="frame" x="0.0" y="212.33333396911624" width="390" height="43.666667938232393"/>
+                                        <rect key="frame" x="0.0" y="172.33333015441895" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xNt-9R-rWM" id="B41-z3-GQX">
                                             <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="43.666667938232422"/>
@@ -163,28 +165,23 @@
                             <outlet property="delegate" destination="21A-V2-U9B" id="7j5-uq-9SE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TSs-yZ-he0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hgf-dj-gt9">
-                            <connections>
-                                <segue destination="2zk-nY-Fzf" kind="unwind" unwindAction="unwindCancel:" id="q6e-v6-mbb"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Add Event" id="TSs-yZ-he0">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="5bs-7G-zna">
                             <connections>
                                 <action selector="didTapSave:" destination="21A-V2-U9B" id="cui-sM-Kl9"/>
-                                <segue destination="2zk-nY-Fzf" kind="unwind" unwindAction="unwindSave:" id="c2f-qb-YG7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="categoryLabel" destination="mBc-WJ-LaJ" id="qV8-SE-QTy"/>
-                        <outlet property="eventTextField" destination="Ezg-SJ-ckr" id="ulU-KP-KsB"/>
+                        <outlet property="contentTextView" destination="aT2-XF-ux8" id="Ua6-w3-bZ2"/>
+                        <segue destination="2zk-nY-Fzf" kind="unwind" identifier="unwindToEventVC" unwindAction="unwindSave:" id="SPt-JE-UXC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zs4-cC-gpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2zk-nY-Fzf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2232" y="3"/>
+            <point key="canvasLocation" x="2229.2307692307691" y="2.8436018957345972"/>
         </scene>
         <!--Category Table View Controller-->
         <scene sceneID="lpZ-Yw-iWM">
@@ -246,28 +243,12 @@
             </objects>
             <point key="canvasLocation" x="-11" y="3"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="b9J-PS-4sc">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bk9-SH-pEC" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="ZHJ-Wo-XwZ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IjF-TJ-wyg">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="21A-V2-U9B" kind="relationship" relationship="rootViewController" id="CZg-RZ-ivF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Au-oT-Uc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1465" y="3"/>
-        </scene>
     </scenes>
     <color key="tintColor" red="0.14335880200000001" green="0.94116201320000004" blue="0.1423615479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
