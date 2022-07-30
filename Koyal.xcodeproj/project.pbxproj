@@ -14,12 +14,15 @@
 		3B9E63F8287D200F00417C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E63F7287D200F00417C4B /* Assets.xcassets */; };
 		3B9E63FB287D200F00417C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E63F9287D200F00417C4B /* LaunchScreen.storyboard */; };
 		3BA30DFB28952526003A3526 /* Koyal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30DF928952526003A3526 /* Koyal.xcdatamodeld */; };
-		3BA30DFF289525D4003A3526 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30DFD289525D4003A3526 /* Event+CoreDataClass.swift */; };
-		3BA30E00289525D4003A3526 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30DFE289525D4003A3526 /* Event+CoreDataProperties.swift */; };
 		3BA30E0228952625003A3526 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0128952625003A3526 /* PersistentStorage.swift */; };
 		3BA30E0528954ED9003A3526 /* EventDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0428954ED9003A3526 /* EventDetailTableViewController.swift */; };
 		3BA30E0728954EEC003A3526 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0628954EEC003A3526 /* CategoryTableViewController.swift */; };
 		3BA30E0B28954F4E003A3526 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0A28954F4E003A3526 /* EventCell.swift */; };
+		3BA30E0F289570E1003A3526 /* CDEvent+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0D289570E1003A3526 /* CDEvent+CoreDataClass.swift */; };
+		3BA30E10289570E1003A3526 /* CDEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0E289570E1003A3526 /* CDEvent+CoreDataProperties.swift */; };
+		3BA30E13289571D2003A3526 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E12289571D2003A3526 /* Event.swift */; };
+		3BA30E172895736D003A3526 /* EventDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E162895736D003A3526 /* EventDataRepository.swift */; };
+		3BA30E192895737E003A3526 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E182895737E003A3526 /* EventManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +35,15 @@
 		3B9E63FA287D200F00417C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B9E63FC287D200F00417C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA30DFA28952526003A3526 /* Koyal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Koyal.xcdatamodel; sourceTree = "<group>"; };
-		3BA30DFD289525D4003A3526 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3BA30DFE289525D4003A3526 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3BA30E0128952625003A3526 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 		3BA30E0428954ED9003A3526 /* EventDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailTableViewController.swift; sourceTree = "<group>"; };
 		3BA30E0628954EEC003A3526 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		3BA30E0A28954F4E003A3526 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		3BA30E0D289570E1003A3526 /* CDEvent+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDEvent+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3BA30E0E289570E1003A3526 /* CDEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3BA30E12289571D2003A3526 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		3BA30E162895736D003A3526 /* EventDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataRepository.swift; sourceTree = "<group>"; };
+		3BA30E182895737E003A3526 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 		3B9E63EA287D200D00417C4B /* Koyal */ = {
 			isa = PBXGroup;
 			children = (
+				3BA30E1528957333003A3526 /* Repositories */,
+				3BA30E142895732D003A3526 /* Managers */,
+				3BA30E11289571A8003A3526 /* Models */,
 				3B9E63EB287D200D00417C4B /* AppDelegate.swift */,
 				3B9E63ED287D200D00417C4B /* SceneDelegate.swift */,
 				3BA30E0C28954F59003A3526 /* Views */,
@@ -87,8 +96,8 @@
 		3BA30DFC289525A1003A3526 /* CoreDataSupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				3BA30DFD289525D4003A3526 /* Event+CoreDataClass.swift */,
-				3BA30DFE289525D4003A3526 /* Event+CoreDataProperties.swift */,
+				3BA30E0D289570E1003A3526 /* CDEvent+CoreDataClass.swift */,
+				3BA30E0E289570E1003A3526 /* CDEvent+CoreDataProperties.swift */,
 				3BA30E0128952625003A3526 /* PersistentStorage.swift */,
 			);
 			path = CoreDataSupportFiles;
@@ -110,6 +119,30 @@
 				3BA30E0A28954F4E003A3526 /* EventCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3BA30E11289571A8003A3526 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BA30E12289571D2003A3526 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3BA30E142895732D003A3526 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3BA30E182895737E003A3526 /* EventManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3BA30E1528957333003A3526 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3BA30E162895736D003A3526 /* EventDataRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,16 +216,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA30E00289525D4003A3526 /* Event+CoreDataProperties.swift in Sources */,
+				3BA30E10289570E1003A3526 /* CDEvent+CoreDataProperties.swift in Sources */,
+				3BA30E13289571D2003A3526 /* Event.swift in Sources */,
 				3B9E63F0287D200D00417C4B /* EventViewController.swift in Sources */,
 				3BA30E0B28954F4E003A3526 /* EventCell.swift in Sources */,
 				3B9E63EC287D200D00417C4B /* AppDelegate.swift in Sources */,
+				3BA30E172895736D003A3526 /* EventDataRepository.swift in Sources */,
 				3BA30E0528954ED9003A3526 /* EventDetailTableViewController.swift in Sources */,
-				3BA30DFF289525D4003A3526 /* Event+CoreDataClass.swift in Sources */,
 				3BA30E0728954EEC003A3526 /* CategoryTableViewController.swift in Sources */,
 				3BA30DFB28952526003A3526 /* Koyal.xcdatamodeld in Sources */,
 				3B9E63EE287D200D00417C4B /* SceneDelegate.swift in Sources */,
+				3BA30E0F289570E1003A3526 /* CDEvent+CoreDataClass.swift in Sources */,
 				3BA30E0228952625003A3526 /* PersistentStorage.swift in Sources */,
+				3BA30E192895737E003A3526 /* EventManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

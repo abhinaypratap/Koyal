@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Event" representedClassName=".Event" syncable="YES">
+    <entity name="CDEvent" representedClassName=".CDEvent" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -12,6 +12,6 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Event" positionX="-27" positionY="18" width="128" height="89"/>
+        <element name="CDEvent" positionX="-27" positionY="18" width="128" height="89"/>
     </elements>
 </model>
