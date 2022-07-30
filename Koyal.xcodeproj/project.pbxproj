@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		3B9E63EC287D200D00417C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E63EB287D200D00417C4B /* AppDelegate.swift */; };
 		3B9E63EE287D200D00417C4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E63ED287D200D00417C4B /* SceneDelegate.swift */; };
-		3B9E63F0287D200D00417C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E63EF287D200D00417C4B /* ViewController.swift */; };
+		3B9E63F0287D200D00417C4B /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E63EF287D200D00417C4B /* EventViewController.swift */; };
 		3B9E63F3287D200D00417C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E63F1287D200D00417C4B /* Main.storyboard */; };
-		3B9E63F6287D200D00417C4B /* Koyal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E63F4287D200D00417C4B /* Koyal.xcdatamodeld */; };
 		3B9E63F8287D200F00417C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E63F7287D200F00417C4B /* Assets.xcassets */; };
 		3B9E63FB287D200F00417C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9E63F9287D200F00417C4B /* LaunchScreen.storyboard */; };
+		3BA30DFB28952526003A3526 /* Koyal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30DF928952526003A3526 /* Koyal.xcdatamodeld */; };
+		3BA30DFF289525D4003A3526 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30DFD289525D4003A3526 /* Event+CoreDataClass.swift */; };
+		3BA30E00289525D4003A3526 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30DFE289525D4003A3526 /* Event+CoreDataProperties.swift */; };
+		3BA30E0228952625003A3526 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0128952625003A3526 /* PersistentStorage.swift */; };
+		3BA30E0528954ED9003A3526 /* EventDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0428954ED9003A3526 /* EventDetailTableViewController.swift */; };
+		3BA30E0728954EEC003A3526 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0628954EEC003A3526 /* CategoryTableViewController.swift */; };
+		3BA30E0B28954F4E003A3526 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA30E0A28954F4E003A3526 /* EventCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B9E63E8287D200D00417C4B /* Koyal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koyal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9E63EB287D200D00417C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B9E63ED287D200D00417C4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B9E63EF287D200D00417C4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B9E63EF287D200D00417C4B /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		3B9E63F2287D200D00417C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B9E63F5287D200D00417C4B /* Koyal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Koyal.xcdatamodel; sourceTree = "<group>"; };
 		3B9E63F7287D200F00417C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B9E63FA287D200F00417C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B9E63FC287D200F00417C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BA30DFA28952526003A3526 /* Koyal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Koyal.xcdatamodel; sourceTree = "<group>"; };
+		3BA30DFD289525D4003A3526 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3BA30DFE289525D4003A3526 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3BA30E0128952625003A3526 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		3BA30E0428954ED9003A3526 /* EventDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailTableViewController.swift; sourceTree = "<group>"; };
+		3BA30E0628954EEC003A3526 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		3BA30E0A28954F4E003A3526 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +72,44 @@
 			children = (
 				3B9E63EB287D200D00417C4B /* AppDelegate.swift */,
 				3B9E63ED287D200D00417C4B /* SceneDelegate.swift */,
-				3B9E63EF287D200D00417C4B /* ViewController.swift */,
+				3BA30E0C28954F59003A3526 /* Views */,
+				3BA30E0328954EAB003A3526 /* Controllers */,
+				3BA30DFC289525A1003A3526 /* CoreDataSupportFiles */,
 				3B9E63F1287D200D00417C4B /* Main.storyboard */,
 				3B9E63F7287D200F00417C4B /* Assets.xcassets */,
+				3BA30DF928952526003A3526 /* Koyal.xcdatamodeld */,
 				3B9E63F9287D200F00417C4B /* LaunchScreen.storyboard */,
 				3B9E63FC287D200F00417C4B /* Info.plist */,
-				3B9E63F4287D200D00417C4B /* Koyal.xcdatamodeld */,
 			);
 			path = Koyal;
+			sourceTree = "<group>";
+		};
+		3BA30DFC289525A1003A3526 /* CoreDataSupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3BA30DFD289525D4003A3526 /* Event+CoreDataClass.swift */,
+				3BA30DFE289525D4003A3526 /* Event+CoreDataProperties.swift */,
+				3BA30E0128952625003A3526 /* PersistentStorage.swift */,
+			);
+			path = CoreDataSupportFiles;
+			sourceTree = "<group>";
+		};
+		3BA30E0328954EAB003A3526 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B9E63EF287D200D00417C4B /* EventViewController.swift */,
+				3BA30E0428954ED9003A3526 /* EventDetailTableViewController.swift */,
+				3BA30E0628954EEC003A3526 /* CategoryTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3BA30E0C28954F59003A3526 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BA30E0A28954F4E003A3526 /* EventCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9E63F0287D200D00417C4B /* ViewController.swift in Sources */,
+				3BA30E00289525D4003A3526 /* Event+CoreDataProperties.swift in Sources */,
+				3B9E63F0287D200D00417C4B /* EventViewController.swift in Sources */,
+				3BA30E0B28954F4E003A3526 /* EventCell.swift in Sources */,
 				3B9E63EC287D200D00417C4B /* AppDelegate.swift in Sources */,
-				3B9E63F6287D200D00417C4B /* Koyal.xcdatamodeld in Sources */,
+				3BA30E0528954ED9003A3526 /* EventDetailTableViewController.swift in Sources */,
+				3BA30DFF289525D4003A3526 /* Event+CoreDataClass.swift in Sources */,
+				3BA30E0728954EEC003A3526 /* CategoryTableViewController.swift in Sources */,
+				3BA30DFB28952526003A3526 /* Koyal.xcdatamodeld in Sources */,
 				3B9E63EE287D200D00417C4B /* SceneDelegate.swift in Sources */,
+				3BA30E0228952625003A3526 /* PersistentStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -274,6 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -308,7 +358,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -336,7 +386,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -364,14 +414,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3B9E63F4287D200D00417C4B /* Koyal.xcdatamodeld */ = {
+		3BA30DF928952526003A3526 /* Koyal.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3B9E63F5287D200D00417C4B /* Koyal.xcdatamodel */,
+				3BA30DFA28952526003A3526 /* Koyal.xcdatamodel */,
 			);
-			currentVersion = 3B9E63F5287D200D00417C4B /* Koyal.xcdatamodel */;
+			currentVersion = 3BA30DFA28952526003A3526 /* Koyal.xcdatamodel */;
 			path = Koyal.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
