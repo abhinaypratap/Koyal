@@ -9,8 +9,10 @@ import UIKit
 
 class EventDetailTableViewController: UITableViewController {
 
-    @IBOutlet weak var eventTextField: UITextField!
+    @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var categoryLabel: UILabel!
+    
+    private let manager = EventManager()
     
     var ctgry: String? {
         willSet {
@@ -21,14 +23,17 @@ class EventDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryLabel.text = ""
-        eventTextField.delegate = self
-        eventTextField.returnKeyType = .done
-        eventTextField.autocorrectionType = .no
-        
+        contentTextView.delegate = self
     }
     
     @IBAction func didTapSave(_ sender: UIBarButtonItem) {
-        
+        let event = Event(id: UUID(), content: contentTextView.text, time: Date(), category: categoryLabel.text)
+        guard let text1 = contentTextView.text, !text1.isEmpty, let text2 = categoryLabel.text, !text2.isEmpty else {
+            return
+        }
+        print(event)
+        manager.createEvent(event: event)
+        performSegue(withIdentifier: "unwindToEventVC", sender: sender)
     }
 }
 
@@ -42,9 +47,9 @@ extension EventDetailTableViewController {
     }
 }
 
-extension EventDetailTableViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        eventTextField.resignFirstResponder()
-        return true
-    }
+extension EventDetailTableViewController: UITextViewDelegate {
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        contentTextView.resignFirstResponder()
+//        return true
+//    }
 }
