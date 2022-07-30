@@ -26,3 +26,9 @@ extension CDEvent {
 extension CDEvent : Identifiable {
 
 }
+
+extension CDEvent {
+    func convertToEvent() -> Event {
+        Event(id: self.id!, content: self.content, time: self.time, category: self.category)
+    }
+}
