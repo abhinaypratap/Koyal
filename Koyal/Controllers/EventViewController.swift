@@ -28,10 +28,6 @@ class EventViewController: UIViewController {
         eventTableView.dataSource = self
         populateTable()
     }
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        populateTable()
-//    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         populateTable()
@@ -73,6 +69,7 @@ extension EventViewController {
 
 extension EventViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        eventTableView.deselectRow(at: indexPath, animated: true)
         print("didSelectRowAt")
     }
 }
@@ -85,6 +82,7 @@ extension EventViewController: UITableViewDataSource {
         dateFormatter.dateFormat = "d MMM YYYY hh:mm a"
         cell.timeLabel.text = dateFormatter.string(from: event.time!)
         cell.contentLabel.text = event.content
+        cell.categoryLabel.text = event.category
         return cell
     }
     
