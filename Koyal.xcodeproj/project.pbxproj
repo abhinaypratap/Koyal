@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6D4B1828A7DCE5001EA838 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3B6D4B1728A7DCE5001EA838 /* README.md */; };
 		3B9E63EC287D200D00417C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E63EB287D200D00417C4B /* AppDelegate.swift */; };
 		3B9E63EE287D200D00417C4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E63ED287D200D00417C4B /* SceneDelegate.swift */; };
 		3B9E63F0287D200D00417C4B /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9E63EF287D200D00417C4B /* EventViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B6D4B1728A7DCE5001EA838 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		3B9E63E8287D200D00417C4B /* Koyal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koyal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9E63EB287D200D00417C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B9E63ED287D200D00417C4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,16 +81,17 @@
 				3BA30E1528957333003A3526 /* Repositories */,
 				3BA30E142895732D003A3526 /* Managers */,
 				3BA30E11289571A8003A3526 /* Models */,
-				3B9E63EB287D200D00417C4B /* AppDelegate.swift */,
-				3B9E63ED287D200D00417C4B /* SceneDelegate.swift */,
 				3BA30E0C28954F59003A3526 /* Views */,
 				3BA30E0328954EAB003A3526 /* Controllers */,
 				3BA30DFC289525A1003A3526 /* CoreDataSupportFiles */,
+				3B9E63EB287D200D00417C4B /* AppDelegate.swift */,
+				3B9E63ED287D200D00417C4B /* SceneDelegate.swift */,
 				3B9E63F1287D200D00417C4B /* Main.storyboard */,
 				3B9E63F7287D200F00417C4B /* Assets.xcassets */,
 				3BA30DF928952526003A3526 /* Koyal.xcdatamodeld */,
 				3B9E63F9287D200F00417C4B /* LaunchScreen.storyboard */,
 				3B9E63FC287D200F00417C4B /* Info.plist */,
+				3B6D4B1728A7DCE5001EA838 /* README.md */,
 			);
 			path = Koyal;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				3B9E63FB287D200F00417C4B /* LaunchScreen.storyboard in Resources */,
 				3B9E63F8287D200F00417C4B /* Assets.xcassets in Resources */,
+				3B6D4B1828A7DCE5001EA838 /* README.md in Resources */,
 				3B9E63F3287D200D00417C4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
