@@ -1,14 +1,7 @@
-//
-//  CategoryTableViewController.swift
-//  Koyal
-//
-//  Created by Abhinay Pratap on 30/07/22.
-//
-
 import UIKit
 
-class CategoryTableViewController: UITableViewController {
-    
+final class CategoryTableViewController: UITableViewController {
+
     let categories = [
         "#journal",
         "#happy",
@@ -27,7 +20,7 @@ class CategoryTableViewController: UITableViewController {
         "#NOTE",
         "#TODO"
     ]
-    
+
     var selectedCatetory: String?
 
     override func viewDidLoad() {
@@ -37,7 +30,7 @@ class CategoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         categories.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
         cell.textLabel?.text = categories[indexPath.row]

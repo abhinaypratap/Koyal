@@ -1,30 +1,21 @@
-//
-//  ViewController.swift
-//  Koyal
-//
-//  Created by Abhinay Pratap on 12/07/22.
-//
-
 import UIKit
 import CoreData
 
-class EventViewController: UIViewController {
+final class EventViewController: UIViewController {
 
     @IBOutlet weak var eventTableView: UITableView!
     private let manager = EventManager()
     var events = [Event]()
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         title = "Events"
         navigationController?.navigationBar.prefersLargeTitles = true
 //        eventTableView.clearsSelectionOnViewWillAppear = false
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         debugPrint(path[0])
-        
+
         eventTableView.delegate = self
         eventTableView.dataSource = self
         populateTable()
@@ -35,11 +26,10 @@ class EventViewController: UIViewController {
     }
 }
 
-
 // Unwind Segues
 extension EventViewController {
     @IBAction func unwindSave(_ sender: UIStoryboardSegue) {
-        
+
     }
 }
 
@@ -77,6 +67,7 @@ extension EventViewController: UITableViewDelegate {
 
 extension EventViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // swiftlint:disable:next force_cast
         let cell = eventTableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
         let event = events[indexPath.row]
         let dateFormatter = DateFormatter()
@@ -86,7 +77,7 @@ extension EventViewController: UITableViewDataSource {
         cell.categoryLabel.text = event.category
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         events.count
     }

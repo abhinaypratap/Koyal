@@ -1,10 +1,3 @@
-//
-//  EmployeeDataRepository.swift
-//  Koyal
-//
-//  Created by Abhinay Pratap on 30/07/22.
-//
-
 import Foundation
 import CoreData
 
@@ -25,7 +18,7 @@ struct EventDataRepository: EventRepository {
         cdEvent.time = event.time
         PersistentStorage.shared.saveContext()
     }
-    
+
     func getAll() -> [Event] {
         let result = PersistentStorage.shared.fetchManagedObject(managedObject: CDEvent.self)
         var events = [Event]()
@@ -34,12 +27,12 @@ struct EventDataRepository: EventRepository {
         })
         return events
     }
-    
+
     func get(byIdentifier id: UUID) -> Event? {
         let result = getCDEvent(byIdentifier: id)
         return result?.convertToEvent()
     }
-    
+
     func update(event: Event) -> Bool {
         let cdEvent = getCDEvent(byIdentifier: event.id)
         guard cdEvent != nil else { return false }
@@ -49,20 +42,20 @@ struct EventDataRepository: EventRepository {
         PersistentStorage.shared.saveContext()
         return true
     }
-    
+
     func delete(byIdentifier id: UUID) -> Bool {
         let cdEvent = getCDEvent(byIdentifier: id)
-        guard cdEvent != nil else { return false }        
+        guard cdEvent != nil else { return false }
         PersistentStorage.shared.context.delete(cdEvent!)
         PersistentStorage.shared.saveContext()
         return true
     }
-    
+
     func getCDEvent(byIdentifier id: UUID) -> CDEvent? {
         let fetchRequest = NSFetchRequest<CDEvent>(entityName: "CDEvent")
         let predicate = NSPredicate(format: "id==%@", id as CVarArg)
         fetchRequest.predicate = predicate
-        
+
         do {
             let result = try PersistentStorage.shared.context.fetch(fetchRequest).first
             guard result != nil else { return nil }
@@ -72,5 +65,4 @@ struct EventDataRepository: EventRepository {
         }
         return nil
     }
-    
 }

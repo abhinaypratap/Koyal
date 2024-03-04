@@ -1,14 +1,5 @@
-//
-//  CDEvent+CoreDataProperties.swift
-//  Koyal
-//
-//  Created by Abhinay Pratap on 30/07/22.
-//
-//
-
 import Foundation
 import CoreData
-
 
 extension CDEvent {
 
@@ -23,9 +14,7 @@ extension CDEvent {
 
 }
 
-extension CDEvent : Identifiable {
-
-}
+extension CDEvent: Identifiable {}
 
 extension CDEvent {
     func convertToEvent() -> Event {

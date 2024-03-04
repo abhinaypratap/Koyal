@@ -1,19 +1,13 @@
-//
-//  PersistentStorage.swift
-//  Koyal
-//
-//  Created by Abhinay Pratap on 30/07/22.
-//
-
 import UIKit
 import CoreData
 
 final class PersistentStorage {
     private init() {}
     static var shared = PersistentStorage()
-    
+
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Koyal")
+        // swiftlint:disable:next unused_closure_parameter
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
                 fatalError("\(error), \(error.userInfo)")
@@ -21,9 +15,9 @@ final class PersistentStorage {
         }
         return container
     }()
-    
+
     lazy var context = persistentContainer.viewContext
-    
+
     func saveContext() {
         if context.hasChanges {
             do {
@@ -34,7 +28,7 @@ final class PersistentStorage {
             }
         }
     }
-    
+
     func fetchManagedObject<T: NSManagedObject>(managedObject: T.Type) -> [T]? {
         do {
             guard let result = try PersistentStorage.shared.context.fetch(managedObject.fetchRequest()) as? [T] else {
